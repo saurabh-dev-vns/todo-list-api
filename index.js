@@ -51,6 +51,9 @@ const app = express();
 // Use CORS middleware with the dynamic options
 app.use(cors(corsOptions));
 
+app.get("/",(re,res)=>{
+    res.send("Server is running.")
+})
 
 // Middleware to parse incoming JSON requests
 app.use(express.json());
